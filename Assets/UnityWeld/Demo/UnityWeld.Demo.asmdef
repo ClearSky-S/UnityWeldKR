@@ -1,0 +1,16 @@
+{
+    "name": "UnityWeld.Demo",
+    "rootNamespace": "UnityWeld_Demo",
+    "references": [
+        "GUID:af0045edb0742c34c9f8aefb8323e52c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
