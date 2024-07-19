@@ -14,7 +14,7 @@ namespace UnityWeld.Binding
         private bool _isInitCalled;
 
         [SerializeField, Header("Automatically bind once on \"OnEnable()\"")]
-        private bool _isAutoConnection;
+        private bool _isAutoConnection = true;
 
 
         /// <summary>
