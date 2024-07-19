@@ -34,7 +34,7 @@ namespace UnityWeld.Binding
         }
 
         [SerializeField, FormerlySerializedAs("uiEventName")]
-        private string viewEventName;
+        private string viewEventName = "UnityEngine.UI.Button.onClick";
 
         /// <summary>
         /// Watches a Unity event for updates.

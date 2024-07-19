@@ -130,6 +130,19 @@ namespace UnityWeld_Editor
                 targetScript.ViewModelPropertyName,
                 property => property.PropertyType == adaptedViewPropertyType
             );
+            GUILayout.Space(20);
+            GUIStyle boldStyle = new GUIStyle(GUI.skin.label);
+            boldStyle.fontStyle = FontStyle.Bold;
+
+            GUILayout.Label("Presets", boldStyle);
+            if (GUILayout.Button("Text"))
+            {
+                targetScript.ViewPropertyName = "TMPro.TextMeshProUGUI.text";
+            }
+            if(GUILayout.Button("Image"))
+            {
+                targetScript.ViewPropertyName = "UnityEngine.UI.Image.sprite";
+            }
 
             GUI.enabled = guiPreviouslyEnabled;
 
