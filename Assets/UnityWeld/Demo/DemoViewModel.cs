@@ -22,15 +22,30 @@ namespace UnityWeld_Demo
             }
         }
 
+        private bool _isMinus;
+
+        [Binding]
+        public bool IsMinus
+        {
+            get => _isMinus;
+            set
+            {
+                _isMinus = value;
+                OnPropertyChanged(nameof(IsMinus));
+            }
+        }
+        
         [Binding]
         public void OnClickAdd()
         {
             Count++;
+            IsMinus = Count < 0;
         }
         [Binding]
         public void OnClickSubtract()
         {
             Count--;
+            IsMinus = Count < 0;
         }
     }
 }

@@ -57,11 +57,11 @@ namespace UnityWeld.Binding
         /// <summary>
         /// Preoprty for the propertySync to set in order to activate and deactivate all children
         /// </summary>
-        public bool ChildrenActive
+        public bool Active
         {
             set
             {
-                SetAllChildrenActive(value);
+                gameObject.SetActive(value);
             }
         }
 
@@ -77,7 +77,7 @@ namespace UnityWeld.Binding
                 // Dest
                 new PropertyEndPoint(
                     this,
-                    "ChildrenActive",
+                    "Active",
                     TypeResolver.GetAdapter(viewAdapterId),
                     viewAdapterOptions,
                     "view",
@@ -104,14 +104,6 @@ namespace UnityWeld.Binding
             {
                 viewModelWatcher.Dispose();
                 viewModelWatcher = null;
-            }
-        }
-
-        private void SetAllChildrenActive(bool active)
-        {
-            foreach (Transform child in transform)
-            {
-                child.gameObject.SetActive(active);
             }
         }
     }
