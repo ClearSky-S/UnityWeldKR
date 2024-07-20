@@ -1,11 +1,11 @@
 {
   "name": "com.clearsky.unityweldkr",
   "displayName": "Unity Weld KR",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/ClearSky-S/UnityWeldKR",
-  "description": "This is a fork of UnityWeld, a Unity MVVM System made by Real Serious Games",
+  "description": "This project is a original fork of UnityWeld(Real-Serious-Games) with the goal of being actively maintained. This project aims to provide a robust and efficient data binding solution for Unity developers, facilitating seamless integration and synchronization between data models and UI components.",
   "author": {
     "name": "ClearSky-S"
   },
-  "license": "SEE LICENSE IN <LICENSE.md>"
+  "license": "This project is licensed under the MIT License - see the LICENSE.md file for details."
 }
