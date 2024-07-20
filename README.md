@@ -22,6 +22,9 @@ Key Features
 - Event Binding: Supports event-binding, which sends UI event to data binding function.
 - Customizable: Easily extendable to support custom data types and binding rules.
 
+## Demo
+Copy 'UnityWeld/Demo/UnityWeldDemo.unity' into Assets Folder.
+
 ## Download
 [![openupm](https://img.shields.io/npm/v/com.clearsky.unityweldkr?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.clearsky.unityweldkr/)
 
