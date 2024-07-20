@@ -2,7 +2,7 @@
 [![openupm](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=downloads&query=%24.downloads&suffix=%2Fmonth&url=https%3A%2F%2Fpackage.openupm.com%2Fdownloads%2Fpoint%2Flast-month%2Fcom.clearsky.unityweldkr)](https://openupm.com/packages/com.clearsky.unityweldkr/)
 
 # UnityWeldKR : extensions, bug fixes and updates for UnityWeld
-This project is a original fork of [UnityWeld]([https://github.com/modesttree/zenject](https://github.com/Real-Serious-Games/Unity-Weld)) with the goal of being actively maintained.
+This project is a original fork of [UnityWeld(Real-Serious-Games)]([https://github.com/modesttree/zenject](https://github.com/Real-Serious-Games/Unity-Weld)) with the goal of being actively maintained.
 
 ## Introduction
 This project aims to provide a robust and efficient data binding solution for Unity developers, facilitating seamless integration and synchronization between data models and UI components.
