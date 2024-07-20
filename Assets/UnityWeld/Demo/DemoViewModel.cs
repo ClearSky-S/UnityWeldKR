@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +10,25 @@ namespace UnityWeld_Demo
     [Binding]
     public class DemoViewModel : ViewModel
     {
-        private int _count;
+        [SerializeField] ViewModelCollection _plusMinusItemCollection;
 
+        private void SetCount(int count)
+        {
+            Count = count;
+            IsMinus = Count < 0;
+            _plusMinusItemCollection.PrepareViewModels(Math.Abs(Count));
+            foreach (var item in _plusMinusItemCollection.GetViewModels())
+            {
+                var plusMinusItem = item as PlusMinusItem;
+                if (plusMinusItem != null)
+                {
+                    plusMinusItem.IsPlus = Count > 0;
+                }
+            }
+        }
+
+
+        private int _count;
         [Binding]
         public int Count
         {
@@ -38,14 +56,12 @@ namespace UnityWeld_Demo
         [Binding]
         public void OnClickAdd()
         {
-            Count++;
-            IsMinus = Count < 0;
+            SetCount(Count+1);
         }
         [Binding]
         public void OnClickSubtract()
         {
-            Count--;
-            IsMinus = Count < 0;
+            SetCount(Count-1);
         }
     }
 }
