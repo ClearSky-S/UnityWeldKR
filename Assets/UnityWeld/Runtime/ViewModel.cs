@@ -15,7 +15,14 @@ namespace UnityWeld
             var bindings = GetComponentsInChildren<AbstractMemberBinding>(true);
             foreach (var binding in bindings)
             {
-                binding.Init();
+                try
+                {
+                    binding.Init();
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError($"Failed to initialize binding {binding.GetType().Name} on {binding.gameObject.name}: {e}");
+                }
             }
         }
 
