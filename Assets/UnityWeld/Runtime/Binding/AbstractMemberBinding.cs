@@ -13,21 +13,12 @@ namespace UnityWeld.Binding
     {
         private bool _isInitCalled;
 
-        [SerializeField, Header("Automatically bind once on \"OnEnable()\"")]
-        private bool _isAutoConnection = true;
-
-
         /// <summary>
         /// Initialise this binding. Used when we first start the scene.
         /// Detaches any attached view models, finds available view models afresh and then connects the binding.
         /// </summary>
         public virtual void Init()
         {
-            if(_isAutoConnection && !gameObject.activeInHierarchy)
-            {
-                return; //wait for enabling
-            }
-
             if (_isInitCalled)
             {
                 return; //avoid double connect
@@ -165,21 +156,7 @@ namespace UnityWeld.Binding
         /// Disconnect from all attached view models.
         /// </summary>
         public abstract void Disconnect();
-
-        /// <summary>
-        /// Standard MonoBehaviour awake message, do not call this explicitly.
-        /// Initialises the binding.
-        /// </summary>
-        protected void OnEnable()
-        {
-            if (!_isAutoConnection || _isInitCalled)
-            {
-                return;
-            }
-
-            Init();
-        }
-
+        
         /// <summary>
         /// Clean up when the game object is destroyed.
         /// </summary>
